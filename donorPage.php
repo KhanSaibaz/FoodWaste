@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $fname=$_POST['fname'];
     $phone=$_POST['phone'];
     $quantity=$_POST['quantity'];
-    $Date=$_POST['date'];
+    $date=date('Y-m-d', strtotime($_POST['date']));
     $city=$_POST['city'];
     $city = strtolower($city);
     $address=$_POST['address'];

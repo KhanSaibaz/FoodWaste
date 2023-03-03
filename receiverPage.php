@@ -4,12 +4,16 @@ session_start();
 if(!isset($_SESSION['user'])){
     header('location:loginPage.php');
 }
-
-if($_SERVER['REQUEST_METHOD']=="POST"){
-
+$city = '';
+if(isset($_POST['action']) && $_POST['action']=="city"){
+global $city;
+$city = $_POST['city'];
+echo $city;
+$query2 = "SELECT * FROM `food_details` WHERE city = '$city'";
+$result2 = mysqli_query($connection,$query2);
 }
 
-$query = "SELECT DISTINCT LOWER(city) FROM `food_details`";
+$query = "SELECT fid,city FROM `food_details` GROUP BY city";
 $result = mysqli_query($connection,$query);
 ?>
 
@@ -24,31 +28,7 @@ $result = mysqli_query($connection,$query);
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="receiverstyle.css">
-        <!-- <script
-            src="https://code.jquery.com/jquery-3.6.1.js"
-            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-            crossorigin="anonymous"></script>
-            <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-
-            <script>
-                $(document).ready(function(){
-                $('#city').on('change',function(){
-                var categorysId=$(this).val();
-                $.ajax({
-                method: "POST",
-                url: "ajaxfile.php",
-                data:{categorys:categorysId},
-                dataType:"html",
-                success: function(data){
-                $("#packageId").html(data);
-                }
-
-                });
-            });
-            });
-
-            </script> -->
 </head>
 <body>
 
@@ -82,37 +62,40 @@ $result = mysqli_query($connection,$query);
                 <div class="col-sm-3">
                     <label for="city" class="form-label">City</label>
                 </div>
+                <input type='hidden' name='action' value='city' />
                 <div class="col-sm-6 ">
-                    <select class="form-select" aria-label="Select City"  id="city">
+                    <select class="form-select" aria-label="Select City"  name="city" onchange="this.form.submit()">
                         <?php 
                              if ($count = mysqli_num_rows($result) > 0) {
-                                echo '<p style="color:red;">'.print_r(mysqli_fetch_assoc($result)).'</p>';
                                 while($r = mysqli_fetch_assoc($result)){
-                                    echo ' <option value="'.$r.'">'.$r['city'].'Hello</option>';
+                                    echo ' <option '.(($city == ucwords($r['city'])) ? "selected ": "").'value="'.$r['city'].'">'.ucwords($r['city']).'</option>';
                                 }
                              }else{
-                                echo '<p>No City Availble</p>';
+                                echo '<option>No City Availble</option>';
                              }
                         ?>
                       </select>
             </div>
         </div>
-    
-
+    </form>
+    <form method="POST" action="confirmProduct.php">
+    <input type='hidden' name='action' value='item' />
     <div class="row my-3 mr-0">
             <div class="col-sm-3">
                 <label for="items" class="form-label">Item  </label>
             </div>
             <div class="col-sm-6 ">
-                <select class="form-select" aria-label="Select Item"  id="item">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="form-select" aria-label="Select Item"  name="item">
+                    <?php 
+                     if ($count2 = mysqli_num_rows($result2) > 0) {
+                        while($r2 = mysqli_fetch_assoc($result2)){
+                            echo '<option value="'.$r2['fid'].'">'.$r2['fname'].'</option>';
+                        }
+                     }
+                    ?>
                   </select>
         </div>
     </div>
-        
         
             <br>
             <div class="text-center">
