@@ -8,7 +8,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$pass=$_POST['pass'];
 	$cpass=$_POST['cpass'];
 	$rating=0;
-	// khan@333
 
 	$sql1="SELECT * FROM `user_details` WHERE email='$email'";
 	$result1=mysqli_query($connection,$sql1);
@@ -42,63 +41,91 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>Register</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@300&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="registerstyle.css">
-
 </head>
 
 <body>
-	<div class="box-form">
-		<div class="left">
-			<div class="overlay fs-sm-2">
-				<h1>Hello World.</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Curabitur et est sed felis aliquet sollicitudin</p>
+	<img src="static\registerPage.png">
+	<form action="" method='POST'>
+		<div class="box  col-12 m-0 ml-sm-5 col-sm-6 align-items-center text-center">
+			<h1 class="my-7 mt-5">Register</h1>
+			<hr>
+			<div class="row my-4">
+				<div class="col-sm-3">
+					<label for="name" class="form-label" name='fname'>Name</label>
+				</div>
+				<div class="col-sm-6">
+					<input type="text" class='form-control input-buttons text-light' placeholder="Enter the Name" name="name" id="name"
+						required>
+				</div>
+			</div>
+
+			<div class="row my-4">
+				<div class="col-sm-3">
+					<label for="number" class="form-label">Phone No</label>
+				</div>
+				<div class="col-sm-6">
+					<input type="text" class='form-control input-buttons text-light' placeholder="Enter the phone no" name="num" id="num"
+						required>
+				</div>
+			</div>
+
+			<div class="row my-4">
+				<div class="col-sm-3">
+					<label for="email" class="form-label">Email</label>
+				</div>
+				<div class="col-sm-6">
+					<input type="numberemail" class='form-control input-buttons text-light' placeholder="Enter the Email" name="email"
+						id="email" required>
+				</div>
+			</div>
+
+			<div class="row my-4">
+				<div class="col-sm-3">
+					<label for="password" class="form-label">Password</label>
+				</div>
+				<div class="col-sm-6">
+					<input type="password" class='form-control input-buttons text-light' placeholder="Enter the password" name="pass" id="pass"
+						required>
+				</div>
+			</div>
+
+			<div class="row my-4">
+				<div class="col-sm-3">
+					<label for="resetpassword" class="form-label">Confirm password</label>
+				</div>
+				<div class="col-sm-6">
+					<input type="password" class='form-control input-buttons text-light' placeholder="Enter the Confirm password" name="pass"
+						id="pass" required>
+				</div>
+			</div>
+			<div class="text-center">
+				<button type="button" class="btn btn-link">Forgot Password</button>
+			</div>
+			<div class="text-center">
+				<button type="button" class="btn btn-outline-light col-lg-3 text-light my-3 btss">Register</button>
 			</div>
 		</div>
 
-
-		<div class="loginBox">
-			<h5>Register</h5>
-
-				<form action="./registerPage.php" method='POST'>
-				<div class="inputs">
-					<input type="text" placeholder="Enter Name" name="name">
-					<br>
-					<input type="text" placeholder="Enter Phone no" name="phone">
-					<br>
-					<input type="email" placeholder="Enter Email" name="email">
-					<br>
-					<input type="password" placeholder=" Enter password" name="pass">
-					<br>
-					<input type="password" placeholder="Repeat password" name="cpass">
-					<br>
-				</div>
-
-				<br><br>
-
-				<div class="forget-password">
-					
-					<p>forget password?</p>
-				</div>
-
-				<br>
-				<button>Login</button>
-			</div>
-
 	</form>
-	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+
 
 </body>
 

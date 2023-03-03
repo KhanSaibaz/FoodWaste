@@ -1,21 +1,21 @@
 <?php
-session_start();
 if($_SERVER['REQUEST_METHOD']=='POST'){
-	include 'db_connection.php';
+    include 'db_connection.php';
     echo 'in post';
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
 
 	echo $email;
 	echo $pass;
-
+    
 	$sql="SELECT uid FROM `user_details` WHERE email='$email' and password ='$pass'";
 	$result=mysqli_query($connection,$sql);
 	$num=mysqli_num_rows($result);
 	echo $num;
-
+    
 	if($num>=1){
-		$row=mysqli_fetch_assoc($result);
+        $row=mysqli_fetch_assoc($result);
+        session_start();
 		$_SESSION['user']=$row['uid'];
 		header('location:selectRole.php');
 
@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <label for="email" class="form-label" name='fname'>Email</label>
                 </div>
                 <div class="col-sm-6">
-                    <input type="email" class='form-control ' placeholder="Enter the Email" name="email" id="email" required>
+                    <input type="email" class='form-control input-buttons text-light' placeholder="Enter the Email" name="email" id="email" required>
                 </div>
             </div>
 
@@ -62,7 +62,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <label for="pass" class="form-label" >Password</label>
               </div>
               <div class="col-sm-6">
-                  <input type="password" class='form-control ' placeholder="Enter the Password" name="pass" id="pass" required>
+                  <input type="password" class='form-control input-buttons text-light' placeholder="Enter the Password" name="pass" id="pass" required>
               </div>
           </div>
        
