@@ -1,12 +1,9 @@
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST'){
     include 'db_connection.php';
-    echo 'in post';
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
 
-	echo $email;
-	echo $pass;
     
 	$sql="SELECT uid FROM `user_details` WHERE email='$email' and password ='$pass'";
 	$result=mysqli_query($connection,$sql);
@@ -43,9 +40,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <link rel="stylesheet" href="loginstyle.css">
 </head>
 <body>
-  <img src="static\donorPage.png" >
+  <img src="static\loginPage.png" >
     <form action="" method='POST' >
-        <div class="box  col-12 m-0 ml-sm-5 col-sm-6 mt-5 align-items-center text-center">
+        <div class="box  col-12 m-0 ml-sm-5 col-sm-6 align-items-center text-center">
             <h1 class="my-7 mt-5">Login</h1>
             <hr>
             <div class="row my-5">
@@ -53,7 +50,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <label for="email" class="form-label" name='fname'>Email</label>
                 </div>
                 <div class="col-sm-6">
-                    <input type="email" class='form-control input-buttons text-light' placeholder="Enter the Email" name="email" id="email" required>
+                    <input type="email" class='form-control input-buttons text-light' placeholder="Enter Your Email" name="email" id="email" required>
                 </div>
             </div>
 
@@ -62,10 +59,26 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                   <label for="pass" class="form-label" >Password</label>
               </div>
               <div class="col-sm-6">
-                  <input type="password" class='form-control input-buttons text-light' placeholder="Enter the Password" name="pass" id="pass" required>
+                  <input type="password" class='form-control input-buttons text-light' placeholder="Enter Your Password" name="pass" id="pass" required>
               </div>
           </div>
        
+
+          <div class=" my-1 d-flex justify-content-between">    
+              <div class="col-sm-3">
+                  <label for="pass" class="form-label" >
+                       <a href="">Forgot password</a> 
+                    </label>
+                </div> 
+
+                <div class="col-sm-3">
+                    <label for="pass" class="form-label" >
+                        <a href="registerPage.php">Create Account</a> 
+                    </label>
+                </div> 
+            </div>
+
+
             <br>
             <div class="text-center">
               <button type="submit" class="btn btn-outline-light col-lg-3 ">Login</button>

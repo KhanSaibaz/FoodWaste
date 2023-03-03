@@ -24,7 +24,7 @@
             <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" aria-current="page" href="#">Home</a>
             <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="#">About</a>
             <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="#">Contact</a>
-            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="selectRole.html">Log In/Sign Up</a>
+            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="loginPage.php">Log In/Sign Up</a>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$num=mysqli_num_rows($result1);
 	
 	if($num>=1){
-
+		echo 'num';
 		header('location:loginPage.php');
 		
 
@@ -76,7 +76,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 					<label for="number" class="form-label">Phone No</label>
 				</div>
 				<div class="col-sm-6">
-					<input type="text" class='form-control input-buttons text-light' placeholder="Enter the phone no" name="num" id="num"
+					<input type="text" class='form-control input-buttons text-light' placeholder="Enter the phone no" maxlength="10" name="num" id="num"
 						required>
 				</div>
 			</div>
@@ -106,17 +106,34 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 					<label for="resetpassword" class="form-label">Confirm password</label>
 				</div>
 				<div class="col-sm-6">
-					<input type="password" class='form-control input-buttons text-light' placeholder="Enter the Confirm password" name="pass"
+					<input type="password" class='form-control input-buttons text-light' placeholder="Enter the Confirm password" name="cpass"
 						id="pass" required>
 				</div>
 			</div>
+
+
+			<div class=" my-1 d-flex justify-content-between edit_space " style=" font-weight:bold;">    
+                <div class="col-sm-3">
+                    <label for="pass" class="form-label" >
+                       <a href="" class="text-decoration-none">Forgot password</a> 
+                    </label>
+                </div> 
+
+                <div class="col-sm-3 mx-3">
+                    <label for="pass" class="form-label" >
+						
+                       <a href="loginPage.php" class="text-decoration-none  ">Already have an account Log In</a> 
+                    </label>
+                </div> 
+            </div>
+
 			<div class="text-center">
-				<button type="button" class="btn btn-link">Forgot Password</button>
-			</div>
-			<div class="text-center">
-				<button type="button" class="btn btn-outline-light col-lg-3 text-light my-3 btss">Register</button>
+				<button type="submit" class="btn btn-outline-light col-lg-3 text-light my-3 btss">Register</button>
 			</div>
 		</div>
+
+		
+
 
 	</form>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

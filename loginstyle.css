@@ -8,13 +8,15 @@ img{
   height: 100%;
   position: absolute;
 }
+
 .box{
   float: left;
-  background-color: rgba(43,41,42,0.9);
+  background-color: rgba(43,41,42,0.6);
   border-radius: 15px;
   position: relative;
   margin-left: 35px;
-  height: 70%;
+  height: 100%;
+  
 
 }
 
