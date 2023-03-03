@@ -2,6 +2,7 @@
 session_start();
 if($_SERVER['REQUEST_METHOD']=='POST'){
 	include 'db_connection.php';
+    echo 'in post';
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
 
@@ -26,60 +27,59 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 					</script>';
 	}
 
-
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Login Page in HTML with CSS Code Example</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel="stylesheet" href="./loginstyle.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loginstyle.css">
 </head>
-
 <body>
-<div class="box-form">
-		<div class="left">
-			<div class="overlay fs-sm-2">
-				<h1>Hello World.</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Curabitur et est sed felis aliquet sollicitudin</p>
-			</div>
-		</div>
+  <img src="static\donorPage.png" >
+    <form action="" method='POST' >
+        <div class="box  col-12 m-0 ml-sm-5 col-sm-6 mt-5 align-items-center text-center">
+            <h1 class="my-7 mt-5">Login</h1>
+            <hr>
+            <div class="row my-5">
+                <div class="col-sm-3">
+                    <label for="email" class="form-label" name='fname'>Email</label>
+                </div>
+                <div class="col-sm-6">
+                    <input type="email" class='form-control ' placeholder="Enter the Email" name="email" id="email" required>
+                </div>
+            </div>
 
-    <form action="./loginPage.php" method='POST'> 
-		<div class="loginBox">
-			<h5>Login</h5>
-			<p>Don't have an account? <a href="#">Create Your Account</a> it takes less than a minute</p>
-			<div class="inputs">
-				<input type="temailxt" placeholder="user email" name='email'>
-				<br>
-				<input type="password" placeholder="password" name='pass'>
-			</div>
+            <div class="row my-5">
+              <div class="col-sm-3">
+                  <label for="pass" class="form-label" >Password</label>
+              </div>
+              <div class="col-sm-6">
+                  <input type="password" class='form-control ' placeholder="Enter the Password" name="pass" id="pass" required>
+              </div>
+          </div>
+       
+            <br>
+            <div class="text-center">
+              <button type="submit" class="btn btn-outline-light col-lg-3 ">Login</button>
+            </div>
+        </div>
 
-			<br><br>
-		<div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 
-		</div>
-			<div class="forget-password">
-				
-				<p>forget password?</p>
-			</div>
-
-			<br>
-			<button>Login</button>
-		</div>
-
-	</form>
-</div>
 
 </body>
 
