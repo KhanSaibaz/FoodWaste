@@ -1,3 +1,7 @@
+<?php
+include 'db_connection.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +17,7 @@
 
 <body>
 
-    <form action="/action_page.php">
+    <form action="/action_page.php" >
         <div class="container">
             <h1 class="my-3">Donate</h1>
             <hr>

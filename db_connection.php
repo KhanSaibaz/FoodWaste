@@ -1,13 +1,16 @@
 <?php
 
-$servername= 'root';
-$username='localhost';
-$password=''
-$database='meal-connect'
-$connection=mysqli_connect($servername,$username,$password,$database)
+$server= 'localhost';
+$username='root';
+$password='';
+$database='meal-connect';
+
+$connection=mysqli_connect($server,$username,$password,$database);
+
 if(!$connection){
-    die(mysqli_connect_error())
+    die(mysqli_connect_error());
 }
 
 
+// mysqli_close($connection);
 ?>
