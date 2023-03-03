@@ -1,4 +1,5 @@
 <?php
+
 if($_SERVER['REQUEST_METHOD']=='POST'){
 	include 'db_connection.php';
 	$name=$_POST['name'];
@@ -7,6 +8,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$pass=$_POST['pass'];
 	$cpass=$_POST['cpass'];
 	$rating=0;
+	// khan@333
 
 	$sql1="SELECT * FROM `user_details` WHERE email='$email'";
 	$result1=mysqli_query($connection,$sql1);
@@ -15,6 +17,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	if($num>=1){
 
 		header('location:loginPage.php');
+		
+
 	}
 
 	else{
@@ -27,8 +31,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 					</script>';
 					header('location:loginPage.php');
 
-					// session_start();
-					// $_SESSION[]
 			}
 		}
 		else{

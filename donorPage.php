@@ -1,12 +1,3 @@
-<?php
-if($_SERVER['REQUEST_METHOD']=='POST'){
-	include 'db_connection.php';
-	$email=$_POST['email'];
-	$pass=$_POST['pass'];
-}
-?>
-
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -15,17 +6,19 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="donorstyle.css">
 </head>
 
 <body>
-
-    <form action="/donorPage.php" method='POST' >
-        <div class="container">
-            <h1 class="my-3">Donate</h1>
+  <img src="static/donorPage.png" >
+    <form action="" method='POST' >
+        <div class="box  col-12 m-0 ml-sm-5 col-sm-6 mt-5 align-items-center text-center">
+            <h1 class="my-7 mt-5">Donate</h1>
             <hr>
-            <div class="row my-2">
+            <div class="row my-3">
                 <div class="col-sm-3">
                     <label for="name" class="form-label" name='fname'>Food Name</label>
                 </div>
@@ -34,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 </div>
             </div>
 
-            <div class="row my-2">
+            <div class="row my-3">
               <div class="col-sm-3">
                   <label for="phone" class="form-label" name='phone'>Mobile No</label>
               </div>
@@ -43,7 +36,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
               </div>
           </div>
           
-          <div class="row my-2">
+          <div class="row my-3">
               <div class="col-sm-3">
                   <label for="quantity" class="form-label">Quantity</label>
               </div>
@@ -53,7 +46,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
           </div>
 
 
-          <div class="row my-2">
+          <div class="row my-3">
             <div class="col-sm-3">
                 <label for="phone" class="form-label">Expiry Date </label>
             </div>
@@ -62,7 +55,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             </div>
         </div>
 
-            <div class="row my-2">
+            <div class="row my-3">
                 <div class="col-sm-3">
                     <label for="city" class="form-label">City</label>
                 </div>
@@ -87,11 +80,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         </div>
         
             <br>
-            <div class="col">
-                <button type="submit" class="register-btn">Submit</button>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-light col-lg-3 ">Submit</button>
             </div>
         </div>
-    </div>
 
     </form>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

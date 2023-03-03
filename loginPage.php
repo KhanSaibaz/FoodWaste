@@ -1,20 +1,23 @@
 <?php
+session_start();
 if($_SERVER['REQUEST_METHOD']=='POST'){
 	include 'db_connection.php';
 	$email=$_POST['email'];
 	$pass=$_POST['pass'];
 
+	echo $email;
+	echo $pass;
 
-	$sql="SELECT * FROM `user_details` WHERE email='$email' and password ='$pass'";
+	$sql="SELECT uid FROM `user_details` WHERE email='$email' and password ='$pass'";
 	$result=mysqli_query($connection,$sql);
 	$num=mysqli_num_rows($result);
 	echo $num;
 
 	if($num>=1){
-		session_start();
-		$_SESSION['user']=$email;
+		$row=mysqli_fetch_assoc($result);
+		$_SESSION['user']=$row['uid'];
 		header('location:selectRole.php');
-		mysqli_close($connection);
+
 		
 	}
 	else{

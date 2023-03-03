@@ -17,6 +17,8 @@ include 'db_connection.php';
 
 <body>
 
+
+
     <form action="/action_page.php">
         <div class="container">
             <h1 class="my-3">Search for Food Items</h1>
