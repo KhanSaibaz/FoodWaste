@@ -1,5 +1,9 @@
 <?php
-include 'db_connection.php';
+if($_SERVER['REQUEST_METHOD']=='POST'){
+	include 'db_connection.php';
+	$email=$_POST['email'];
+	$pass=$_POST['pass'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +21,13 @@ include 'db_connection.php';
 
 <body>
 
-    <form action="/action_page.php" >
+    <form action="/donorPage.php" method='POST' >
         <div class="container">
             <h1 class="my-3">Donate</h1>
             <hr>
             <div class="row my-2">
                 <div class="col-sm-3">
-                    <label for="phone" class="form-label">Food Name</label>
+                    <label for="name" class="form-label" name='fname'>Food Name</label>
                 </div>
                 <div class="col-sm-6">
                     <input type="text" class='form-control ' placeholder="Enter Food Name" name="fname" id="fname" required>
@@ -32,7 +36,7 @@ include 'db_connection.php';
 
             <div class="row my-2">
               <div class="col-sm-3">
-                  <label for="phone" class="form-label">Mobile No</label>
+                  <label for="phone" class="form-label" name='phone'>Mobile No</label>
               </div>
               <div class="col-sm-6">
                   <input type="text" class='form-control ' placeholder="Enter your mobile no" name="phone" id="phone" required>
@@ -40,11 +44,21 @@ include 'db_connection.php';
           </div>
           
           <div class="row my-2">
+              <div class="col-sm-3">
+                  <label for="quantity" class="form-label">Quantity</label>
+              </div>
+              <div class="col-sm-6">
+                  <input type="no" class='form-control ' placeholder="Enter Quantity" name="quantity" id="quantity" required>
+              </div>
+          </div>
+
+
+          <div class="row my-2">
             <div class="col-sm-3">
                 <label for="phone" class="form-label">Expiry Date </label>
             </div>
             <div class="col-sm-6">
-                <input type="date" class='form-control ' placeholder="Enter your mobile no" name="phone" id="phone" required>
+                <input type="date" class='form-control ' placeholder="Enter your mobile no" name="Date" id="phone" required>
             </div>
         </div>
 
