@@ -26,7 +26,13 @@
     <div class="px-4 pt-5 my-5 mx-auto ">
         <div class="col-lg-5 mt-4 float-end">
           <h1 class="HeroTitle display-4 fw-bold w-100">MEAL CONNECT</h1>
-        <p class="lead  fw-bold HeroText">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <p class="lead  fw-bold HeroText">When you donate to Connect Meal, you are making a real difference in the 
+              lives of those who need it most. Your contribution helps us provide meals to 
+              families, children, seniors, and individuals who are struggling to put food on the 
+              table. With your help, we can reduce food waste, fight hunger, and build a stronger, 
+              more resilient community.Join us today and help make a difference in the fight 
+              against hunger. Together, we can create a world where everyone has access to the food
+              they need to thrive.</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-center mb-5">
             <a  class="btn btn-outline-light btn-lg px-4 me-sm-3 HeroButton" href="viewpage.php">View works</a>
           </div>

@@ -26,9 +26,9 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" aria-current="page" href="#">Home</a>
-                        <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="#">About</a>
-                        <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="#">Contact</a>
+                        <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" aria-current="page" href="index.php">Home</a>
+                        <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="aboutPage.php">About</a>
+                        <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="contactPage.php">Contact</a>
                         <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="loginPage.php">Log In/Sign
                             Up</a>
                     </div>
@@ -40,7 +40,7 @@
 
             <div class="col-sm-4 mb-3 mb-sm-0">
                 <div class="card bg-transparent" style="width: 18rem;">
-                    <img src="/static/image10.jpeg" class="card " alt="...">
+                    <img src="image10.jpeg" class="card " alt="...">
                     <div class="card-body text-white">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
@@ -49,7 +49,7 @@
 
             <div class="col-sm-4">
                 <div class="card bg-transparent" style="width: 18rem;">
-                    <img src="/static/image11.jpeg" class="card " alt="...">
+                    <img src="image11.jpeg" class="card " alt="...">
                     <div class="card-body text-white">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk ofthecard's content.</p>
                     </div>
@@ -58,7 +58,7 @@
             
             <div class="col-sm-4">
                 <div class="card bg-transparent" style="width: 18rem;">
-                    <img src="/static/image11.jpeg" class="card " alt="...">
+                    <img src="image11.jpeg" class="card " alt="...">
                     <div class="card-body text-white">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk ofthecard's content.</p>
                     </div>
@@ -67,7 +67,7 @@
 
             <div class="col-sm-4">
                 <div class="card bg-transparent" style="width: 18rem;">
-                    <img src="/static/image11.jpeg" class="card " alt="...">
+                    <img src="image11.jpeg" class="card " alt="...">
                     <div class="card-body text-white">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk ofthecard's content.</p>
                     </div>
@@ -76,7 +76,7 @@
 
             <div class="col-sm-4">
                 <div class="card bg-transparent" style="width: 18rem;">
-                    <img src="/static/image11.jpeg" class="card " alt="...">
+                    <img src="image11.jpeg" class="card " alt="...">
                     <div class="card-body text-white">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk ofthecard's content.</p>
                     </div>
@@ -85,7 +85,7 @@
 
             <div class="col-sm-4">
                 <div class="card bg-transparent" style="width: 18rem;">
-                    <img src="/static/image12.jpeg" class="card " alt="...">
+                    <img src="image12.jpeg" class="card " alt="...">
                     <div class="card-body text-white">
                         <p class="card-text">Some quick  text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
