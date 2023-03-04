@@ -8,7 +8,6 @@ $city = '';
 if(isset($_POST['action']) && $_POST['action']=="city"){
 global $city;
 $city = $_POST['city'];
-echo $city;
 $query2 = "SELECT * FROM `food_details` WHERE city = '$city'";
 $result2 = mysqli_query($connection,$query2);
 }
@@ -68,7 +67,7 @@ $result = mysqli_query($connection,$query);
                         <?php 
                              if ($count = mysqli_num_rows($result) > 0) {
                                 while($r = mysqli_fetch_assoc($result)){
-                                    echo ' <option '.(($city == ucwords($r['city'])) ? "selected ": "").'value="'.$r['city'].'">'.ucwords($r['city']).'</option>';
+                                    echo ' <option '.(($city == strtolower($r['city'])) ? "selected ": "").'value="'.$r['city'].'">'.ucwords($r['city']).'</option>';
                                 }
                              }else{
                                 echo '<option>No City Availble</option>';

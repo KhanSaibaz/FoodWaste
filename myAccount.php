@@ -55,7 +55,7 @@ session_start();
             </div>
             <br>
 			<div class="text-center">
-				<button type="button" class="btn btn-outline-light col-lg-3 text-light my-3 btss">Log Out</button>
+				<a class="btn btn-outline-light col-lg-3 text-light my-3 btss" href="logout.php">Log Out</a>
 			</div>
 		</div>
 
