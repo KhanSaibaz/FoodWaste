@@ -35,8 +35,8 @@ $result = mysqli_query($connection,$query);
 <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end">
     <div class="d-grid gap-2 d-md-block ">
         <div class="container">
-        <button class="btn btn-outline-light " type="button">Account</button>
-        <button class="btn btn-outline-light" type="button">Logout</button>
+        <a class="btn btn-outline-light " href="myAccount.php">Account</a>
+        <a class="btn btn-outline-light" href="logout.php">Logout</a>
         </div>
 
     </div>

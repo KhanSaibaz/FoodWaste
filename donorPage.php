@@ -10,9 +10,19 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $city=$_POST['city'];
     $city = strtolower($city);
     $address=$_POST['address'];
+    $uid = $_SESSION['user'];
     $sql="INSERT INTO `food_details` ( `fname`, `quantity`, `city`, `expiry`, `address`) VALUES ('$fname', '$quantity', '$city', '$date', '$address');";
     $result=mysqli_query($connection,$sql);
     if($result){
+        $query2 = "SELECT uid,rating FROM `user_details` WHERE uid = '$uid'";
+        $result2 = mysqli_query($connection,$query2);
+        if ($count = mysqli_num_rows($result2) > 0) {
+            $r = mysqli_fetch_assoc($result2);
+            $rating =$rating['rating'];
+            $rating++;
+            $query3 = "UPDATE `user_details` SET `rating`='$rating' WHERE uid = '$uid'";
+            $result3 = mysqli_query($connection,$query3);
+        }
         echo '<script type="text/JavaScript">
         alert("Thank You");
         </script>';

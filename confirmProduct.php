@@ -31,8 +31,8 @@ echo '
 <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end">
     <div class="d-grid gap-2 d-md-block ">
         <div class="container">
-        <button class="btn btn-outline-light " type="button">Account</button>
-        <button class="btn btn-outline-light" type="button">Logout</button>
+        <a class="btn btn-outline-light " href="myAccount.php">Account</a>
+        <a class="btn btn-outline-light" href="logout.php">Logout</a>
     </div>
     
 </div>
@@ -41,7 +41,7 @@ echo '
 <img src="static/donorPage.png" >
 <form action="deletePage.php" method="POST" >
     <div class="box  col-12 m-0 ml-sm-5 col-sm-6 mt-5 align-items-center text-center">
-        
+    <h1 class="my-7 mt-5">Item Details</h1>
     <div class="row">
         <div class="col-sm-6">
             <label for="inputEmail4" class="form-label">Name</label>
@@ -70,8 +70,8 @@ echo '
             <div class="text-center">
               <button type="submit" class="btn btn-outline-light col-lg-3 ">Submit</button>
             </div>
-            <div class="text-center">
-              <a class="btn btn-outline-light col-lg-3 href="receiverPage.php">Back</a>
+            <div class="text-center mt-2">
+              <a class="btn btn-outline-light" col-lg-3 href="receiverPage.php">Back</a>
             </div>
         </div>
     </form>
