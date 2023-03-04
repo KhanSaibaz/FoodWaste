@@ -15,6 +15,7 @@
     <div class="background ">  
     <nav class="navbar navbar-expand-lg position-absolute w-100 popup" style="z-index:  1">
       <div class="container-fluid">
+        <img src="mc.ico" alt="" width="50px" height="50px">
         <a class="navbar-brand text-white fw-100" href="#">MEAL CONNECT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

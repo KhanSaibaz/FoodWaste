@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/mc.ico">
 
     <title>Meal Connect</title>
   </head>
@@ -17,6 +18,7 @@
 
         <nav class="navbar navbar-expand-lg position-absolute w-100 popup" style="z-index:  1">
             <div class="container-fluid">
+            <img src="mc.ico" alt="" width="50px" height="50px">
                 <a class="navbar-brand text-white fw-100" href="#">MEAL CONNECT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
