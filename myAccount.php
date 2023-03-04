@@ -34,11 +34,11 @@ session_start();
             <div class="row">
                 <div class="col-sm-6">
                     <label for="inputEmail4" class="form-label ">Name</label>
-                    <input type="text" disabled class="form-control" value= "<?php echo$row['name']; ?>" placeholder="" aria-label="name">
+                    <input type="text" disabled class="form-control" value= "<?php echo $row['name']; ?>" placeholder="" aria-label="name">
                 </div>
                 <div class="col-sm-6">
                     <label for="inputEmail4" class="form-label">Phone No</label>
-                    <input type="text" disabled class="form-control" value= "<?php echo$row['phone']; ?>" placeholder="" aria-label="Phone">
+                    <input type="text" disabled class="form-control" value= "<?php echo $row['phone']; ?>" placeholder="" aria-label="Phone">
                 </div>
             </div>
             <div class="row">
@@ -49,7 +49,7 @@ session_start();
                 <div class="col-sm-6">
                     <label for="inputEmail4" class="form-label">Rating</label>
                     <input type="text" disabled class="form-control" placeholder="" 
-                    value= "<?php echo '0';?>"
+                    value= "<?php echo $row['rating'];?>"
                     aria-label="Rating">
                 </div>
             </div>

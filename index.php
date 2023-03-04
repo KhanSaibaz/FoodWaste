@@ -13,23 +13,11 @@
     
     
     <div class="background ">  
-    <nav class="navbar navbar-expand-lg position-absolute w-100 popup" style="z-index:  1">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white fw-100" href="#">MEAL CONNECT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" aria-current="page" href="#">Home</a>
-            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="#">About</a>
-            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="#">Contact</a>
-            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="loginPage.php">Log In/Sign Up</a>
-          </div>
-        </div>
-      </div>
-    </nav>
 
+      <?php
+    include 'nav.php';
+      
+      ?>
         
         
     
@@ -40,8 +28,7 @@
           <h1 class="HeroTitle display-4 fw-bold w-100">MEAL CONNECT</h1>
         <p class="lead  fw-bold HeroText">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-center mb-5">
-            <button type="button " class="btn btn-outline-light btn-lg px-4 me-sm-3 HeroButton">Primary button</button>
-            <button type="button " class="btn btn-outline-light btn-lg px-4 HeroButton">Secondary</button>
+            <a  class="btn btn-outline-light btn-lg px-4 me-sm-3 HeroButton" href="viewpage.php">View works</a>
           </div>
         </div>
       </div>

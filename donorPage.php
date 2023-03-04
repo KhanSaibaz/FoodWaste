@@ -95,7 +95,7 @@ echo '
                         <label for="date" class="form-label">Expiry Date </label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="date" class="form-control " placeholder="Enter your mobile no" name="date" id="date" required>
+                        <input type="date" class="form-control "  name="date" id="date" required>
                     </div>
                 </div>
                 

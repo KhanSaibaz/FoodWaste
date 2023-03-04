@@ -27,6 +27,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 }
 ?>
 
+
+
 <html>
 <head>
 
@@ -41,6 +43,23 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 </head>
 <body>
   <img src="static\loginPage.png" >
+
+  <div class="background ">  
+    <nav class="navbar navbar-expand-lg position-absolute w-100 popup" style="z-index:  1">
+      <div class="container-fluid">
+    
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" aria-current="page" href="index.php">Home</a>
+            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="aboutPage.php">About</a>
+            <a class="fs-6 btn btn-outline-light btn-lg px-4 me-sm-3" href="contactPage.php">Contact</a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
     <form action="" method='POST' >
         <div class="box  col-12 m-0 ml-sm-5 col-sm-6 align-items-center text-center">
             <h1 class="my-7 mt-5">Login</h1>
