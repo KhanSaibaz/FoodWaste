@@ -1,4 +1,5 @@
 <?php
+session_start();
 if($_SERVER['REQUEST_METHOD']=='POST'){
     include 'db_connection.php';
 	$email=$_POST['email'];
@@ -8,11 +9,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$sql="SELECT uid FROM `user_details` WHERE email='$email' and password ='$pass'";
 	$result=mysqli_query($connection,$sql);
 	$num=mysqli_num_rows($result);
-	echo $num;
     
 	if($num>=1){
         $row=mysqli_fetch_assoc($result);
-        session_start();
+        
 		$_SESSION['user']=$row['uid'];
 		header('location:selectRole.php');
 

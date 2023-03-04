@@ -95,7 +95,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 					<label for="number" class="form-label">Phone No</label>
 				</div>
 				<div class="col-sm-6">
-					<input type="text" class='form-control input-buttons text-light' placeholder="Enter the phone no" maxlength="10" name="num" id="num"
+					<input type="tel" class='form-control input-buttons text-light' placeholder="Enter the phone no" maxlength="10" name="phone" id="num"
 						required>
 				</div>
 			</div>
